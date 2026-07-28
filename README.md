@@ -67,6 +67,3 @@ make tools
 time ./bin/app massive_10gb.json
 ```
 *Note: Due to `mmap` page caching, your first run will be disk I/O bound. Subsequent runs will be served entirely from RAM, demonstrating the true parser throughput.*
-
----
-*Developed for high-performance data processing requirements.*
