@@ -8,7 +8,7 @@ This repository contains a high-performance, single-threaded C++17 JSON parser d
 
 In standardized benchmarking, this parser effortlessly processes **10.2 GB of unstructured JSON in 14.5 seconds (~700 MB/s)** on a standard consumer CPU.
 
-## 🚀 The 3 Pillars of Performance
+##  The 3 Pillars of Performance
 
 Standard JSON parsers build a full Document Object Model (DOM) tree in memory, which crashes when file sizes exceed physical RAM. This parser utilizes three advanced techniques to bypass the OS file-stream bottleneck and eliminate heap allocations:
 
@@ -27,7 +27,7 @@ Standard C++ numeric parsing (`std::stod` or `atof`) is surprisingly slow due to
 * **The Concept**: This parser utilizes the C++17 `<charconv>` library, specifically `std::from_chars`, which is a low-level, locale-independent, and highly optimized string-to-float converter.
 * **The Result**: Safely parses floating-point revenue amounts at maximum CPU speed directly from the memory-mapped views.
 
-## 🛠️ Build & Usage
+##  Build & Usage
 
 The project is dependency-free (no external libraries like `nlohmann/json`). All that is required is a C++17 compatible compiler (e.g., GCC 10+).
 
@@ -47,7 +47,7 @@ This will compile the source code and place the executable in `bin/app`.
 2. Failure Rate (percentage of `failed` transactions).
 3. The Category with the highest revenue (alphabetically tie-broken if equal).
 
-## 📊 Benchmarking & Data Generation
+## Benchmarking & Data Generation
 
 To verify the speed claims, this repository includes a high-performance JSON generator (`tools/fast_gen.cpp`) capable of instantly generating massively randomized valid JSON transaction logs.
 
